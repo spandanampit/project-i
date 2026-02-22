@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         {/* UI Layer */}
         <Navbar />
         
-        <main className="relative pt-20 min-h-screen">
+        <main className="relative min-h-screen">
           {children}
         </main>
 
