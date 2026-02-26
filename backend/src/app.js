@@ -3,6 +3,8 @@ const cors = require('cors');
 const { CLIENT_ORIGIN, CLIENT_ORIGINS } = require('./config/env');
 const buildSessionConfig = require('./config/session');
 const authRoutes = require('./routes/authRoutes');
+const coursesRoutes = require('./routes/coursesRoutes');
+const studentsRoutes = require('./routes/studentsRoutes');
 const { notFoundHandler, errorHandler } = require('./middlewares/errorHandler');
 
 const app = express();
@@ -39,6 +41,8 @@ app.get('/api/health', (req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+app.use('/api/courses', coursesRoutes);
+app.use('/api/students', studentsRoutes);
 
 app.use(notFoundHandler);
 app.use(errorHandler);
