@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Calendar, Clock, Users, Plus, MoreVertical, BookOpen } from 'lucide-react';
 import CreateBatchModal from "./addCourse";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000';
+import { API_BASE_URL } from '@/app/lib/config';
 
 const CARD_COLORS = ['bg-indigo-500', 'bg-orange-500', 'bg-emerald-500', 'bg-cyan-500', 'bg-rose-500'];
 

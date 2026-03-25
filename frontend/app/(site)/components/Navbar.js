@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { LayoutDashboard, LogIn, UserPlus } from 'lucide-react';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000';
+import { API_BASE_URL } from '@/app/lib/config';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
