@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Sidebar from './components/Sidebar';
 import Header from './components/DashboardHeader';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000';
+import { API_BASE_URL } from '@/app/lib/config';
 
 export default function DashboardLayout({ children }) {
   const router = useRouter();
