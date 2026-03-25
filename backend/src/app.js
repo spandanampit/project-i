@@ -8,6 +8,7 @@ const studentsRoutes = require('./routes/studentsRoutes');
 const { notFoundHandler, errorHandler } = require('./middlewares/errorHandler');
 
 const app = express();
+app.set('trust proxy', 1);
 
 const allowedOrigins = new Set([CLIENT_ORIGIN, ...CLIENT_ORIGINS]);
 const corsOptions = {
